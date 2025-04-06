@@ -11,7 +11,7 @@ Este é um projeto Angular que exibe **locais de habitação disponíveis**, com
 
 ## 📸 Imagem de exemplo
 
-![Preview](preview.png)
+![Preview](Preview.png)
 
 ---
 
