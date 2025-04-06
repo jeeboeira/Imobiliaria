@@ -1,59 +1,108 @@
-# Casas
+# 🏡 Housing Locations App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+Este é um projeto Angular que exibe **locais de habitação disponíveis**, com a possibilidade de enviar uma aplicação para moradia. Ele utiliza:
 
-## Development server
+- ✅ Angular 17+
+- ✅ `json-server` como backend fake
+- ✅ Componentes standalone
+- ✅ `ReactiveForms` para formulários
 
-To start a local development server, run:
+---
+
+## 📸 Imagem de exemplo
+
+![screenshot](/Casas/public/Example.png)
+
+---
+
+## 🚀 Como rodar o projeto
+
+Siga os passos abaixo para rodar a aplicação localmente:
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+```
+
+### 3. Inicie o backend (fake API)
+
+Este projeto usa `json-server` para simular uma API. Certifique-se de ter ele instalado globalmente:
+
+```bash
+npm install -g json-server
+```
+
+Depois, inicie o servidor:
+
+```bash
+json-server --watch db.json --port 3000
+```
+
+> O arquivo `db.json` já está configurado com dados iniciais.
+
+### 4. Inicie o frontend Angular
+
+Em outro terminal:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abra o navegador em `http://localhost:4200` e veja o app funcionando 🎉
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧩 Funcionalidades
 
-```bash
-ng generate component component-name
+- Listagem de casas disponíveis
+- Detalhes de cada casa
+- Aplicação com nome, sobrenome e e-mail
+- Estilo visual responsivo com imagens reais
+- Roteamento com `ActivatedRoute` funcionando corretamente
+
+---
+
+## 📁 Estrutura de arquivos (resumida)
+
+```
+src/
+├── app/
+│   ├── casa-serv.service.ts      // Serviço para obter dados da API
+│   ├── casalocalizacao.ts        // Interface da casa
+│   ├── home/                     // Página principal
+│   ├── details/                  // Página de detalhes da casa
+│   ├── app.routes.ts            // Rotas configuradas
+│   └── app.component.ts         // Componente principal
+├── assets/
+│   └── imagens/...
+├── db.json                       // Backend fake com json-server
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 💡 Dicas
 
-## Building
+- Se der erro `No provider for ActivatedRoute`, verifique se o `provideRouter(routes)` está presente no `main.ts`.
+- Se quiser adicionar novas casas, edite o arquivo `db.json`.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🛠️ Requisitos
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Node.js 18+
+- Angular CLI
+- json-server
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🤝 Contribuições
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Contribuições são muito bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.

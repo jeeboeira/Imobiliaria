@@ -1,0 +1,23 @@
+<section>
+    <form>
+        <input 
+            type="text" 
+            [(ngModel)]="filtro" 
+            name="filtro"
+            placeholder="Filter by city"
+            (ngModelChange)="filterResults(filtro)"
+        />
+        <button (click)="filterResults(filtro); $event.preventDefault()">Buscar</button>
+
+
+    </form>
+</section>
+
+<section class="results">
+
+    <app-localizacao-casa
+        *ngFor="let casalocalizacao of filteredLocationList"
+        [casalocalizacao]="casalocalizacao">
+    </app-localizacao-casa>
+    
+</section>
